@@ -1,0 +1,223 @@
+html { height: 100%; min-height: 100%; overflow-y: scroll; } body { background: linear-gradient( #c04848, transparent), linear-gradient( 90deg, #480048, transparent), linear-gradient( -90deg, #480048, transparent); background-attachment: fixed; font-family: 'Ubuntu'; min-height: 100%; font-weight: 500; color: silver; } main { display: block; width: 100%; }
+
+.profilepage { height: auto; position: absolute; width: 100%; } .nav-container { height: 13%; } .nav-container h1 { text-align: center; margin-top: 10px; }
+
+.gallery-container {
+    /*padding-top: 5%;*/
+    height: auto;
+    position: relative;
+    /*    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);*/
+}
+
+
+
+/* UPLOAD MODAL */
+
+.modal {
+    max-height: 90%;
+}
+
+.modal-form-row {
+    margin-bottom: 0px;
+}
+
+.modal .modal-content {
+    padding-bottom: 0;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+
+.slider {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    /*position: relative;
+    width: 80%;
+    left: 10%;*/
+}
+
+.slider .slides {
+    width: 85%;
+    height: 100%;
+    background-color: transparent;
+    margin: 0 auto;
+}
+
+.slider .slides li {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
+}
+
+.slider .slides li img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+.slider .slides li .caption {
+    top: 5%;
+    left: 28%;
+    opacity: 0;
+}
+
+#materialbox-overlay .btn-floating {
+    top: 25px;
+    right: 0;
+    bottom: 0;
+    left: 25px;
+}
+
+.materialboxed {
+    -webkit-animation: slideIn .3s ease-in 1 forwards;
+    animation: slideIn .3s ease-in 1 forwards;
+    transform: translateX(0%);
+}
+
+@-webkit-keyframes slideIn {
+    to {
+        transform: translateX(50%);
+    }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(50%);
+    }
+}
+
+@-webkit-keyframes slideOut {
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideOut {
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.materialboxed.active {
+    -webkit-animation: slideOut .3s ease-in 1 forwards;
+    animation: slideOut .3s ease-in 1 forwards;
+    transform: translate(50%) ;
+}
+
+@media (max-width: 600px) {
+    .materialboxed {
+        -webkit-animation: slideOut .3s ease-in 1 forwards;
+        animation: slideOut .3s ease-in 1 forwards;
+        transform: translate(50%) ;
+    }
+}
+
+
+/*ANIMATION*/
+
+@-webkit-keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    -webkit-animation: fadeIn .7s ease-in 1 forwards;
+    animation: fadeIn .7s ease-in 1 forwards;
+    opacity: 0;
+}
+
+.is-paused {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.fade-in-out {
+    -webkit-animation: fadeIn .3s ease-in-out 4 alternate;
+    animation: fadeIn .3s ease-in-out 4 alternate;
+    opacity: 0.5;
+    background-color: rgba(255, 99, 71, 0.5);
+    position: absolute;
+    color: white;
+    width: 25%;
+    margin-top: 5px;
+    padding: 7px 0;
+    border: none;
+    -webkit-transform: translateX(-50%);
+    border-radius: 25px;
+    outline: none;
+}
+
+.upload-msg {
+    -webkit-animation: fadeIn 0.3 ease-in 1 forwards;
+    animation: fadeIn 0.3s ease-in 1 forwards;
+    opacity: 0;
+    font-weight: 600;
+    font-size: 11px;
+    padding: 8px 30px;
+    background-color: rgba(204, 255, 129, 0.5);
+    color: #616161;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+}
+
+
+/* END OF ANIMATION */
+
+.slider .slides li .caption {
+    background-color: rgba(176, 190, 197,0.5);
+    padding: 0.8em;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 25px 5px rgba(176,190,197,0.5);
+    -moz-box-shadow: 0px 0px 25px 5px rgba(176,190,197,0.5);
+    box-shadow: 0px 0px 25px 5px rgba(176,190,197,0.5);
+}
+
+.slides div .caption {
+    position: relative;
+    -webkit-animation: slideIn .3s ease-in 1 forwards;
+    animation: slideIn .3s ease-in 1 forwards;
+    transform: translateX(0%);
+    width: 100%;
+    opacity: 1;
+    background-color: rgba(176, 190, 197,0.5);
+    -webkit-box-shadow: 0px 0px 25px 2px rgba(176,190,197,0.5);
+    -moz-box-shadow: 0px 0px 25px 2px rgba(176,190,197,0.5);
+    box-shadow: 0px 0px 25px 2px rgba(176,190,197,0.5);
+}
+.slides div .caption h4{
+    margin-top: 2px;
+}
+.slides div .caption p{
+    margin-bottom: 2px;
+}
+@media (max-width: 600px) {
+    .slides div .caption {
+        -webkit-animation: slideOut .5s ease-in 1 forwards;
+        animation: slideOut .5s ease-in 1 forwards;
+        transform: translate(50%) ;
+    }
+}
+
+/* LOADING ANIMATION */
+.anim { width: 100px; height: 100px; position: fixed; top: 0; bottom: 0; left: 0; right: 0; display: none; margin-top: 10%; margin-left: 50%; filter: url('#goo'); animation: rotate-move 2s ease-in-out infinite; } svg { position: fixed; top: 0; left: 0; } .dot { width: 70px; height: 70px; border-radius: 80%; background-color: #000; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; } .dot-3 { background-color: #f74d75; animation: dot-3-move 2s ease infinite; } .dot-2 { background-color: #10beae; animation: dot-2-move 2s ease infinite; } .dot-1 { background-color: #ffe386; animation: dot-1-move 2s ease infinite; } @keyframes dot-3-move { 20% {transform: scale(1)} 45% {transform: translateY(-18px) scale(.45)} 60% {transform: translateY(-40px) scale(.45)} 80% {transform: translateY(-40px) scale(.45)} 100% {transform: translateY(0px) scale(1)} } @keyframes dot-2-move { 20% {transform: scale(1)} 45% {transform: translate(-16px, 12px) scale(.45)} 60% {transform: translate(-40px, 40px) scale(.45)} 80% {transform: translate(-40px, 40px) scale(.45)} 100% {transform: translateY(0px) scale(1)} } @keyframes dot-1-move { 20% {transform: scale(1)} 45% {transform: translate(16px, 12px) scale(.45)} 60% {transform: translate(40px, 40px) scale(.45)} 80% {transform: translate(40px, 40px) scale(.45)} 100% {transform: translateY(0px) scale(1)} } @keyframes rotate-move { 55% {transform: rotate(0deg)} 80% {transform: rotate(360deg)} 100% {transform: rotate(360deg)} }
+/* HEADLINE */
+.welcome-msg { text-align: center; margin: auto; color: white; } .welcome-msg p { text-align: center; margin: auto; color: white; } h1 { text-transform: uppercase; letter-spacing: .1em; } h1 > em, h1 > strong { font-size: 0; padding: 0 1em; position: relative; display: block; } h1 > em:before, h1 > em:after, h1 > strong:before, h1 > strong:after { font-size: 1rem; content: ''; display: inline-block; vertical-align: middle; width: 15%; max-width: 7em; height: 3px; background: #480048; border-radius: 50%; position: relative; top: -.3em; } h1 > em > strong, h1 > em > em, h1 > strong > strong, h1 > strong > em { font: normal 3.5rem/1 "Pinyon Script", serif; font-style: normal; text-transform: none; letter-spacing: 0; max-width: 70%; display: inline-block; vertical-align: middle; padding: 0 .2em 0; }
